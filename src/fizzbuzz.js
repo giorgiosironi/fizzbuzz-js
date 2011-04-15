@@ -2,7 +2,8 @@ function fizzbuzz(number)
 {
     var correspondences = {
         3 : 'Fizz',
-        5 : 'Buzz'
+        5 : 'Buzz',
+        7 : 'Bang'
     };
     var result = '';
     for (var divisor in correspondences) {
