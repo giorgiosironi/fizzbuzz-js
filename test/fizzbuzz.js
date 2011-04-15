@@ -18,5 +18,8 @@ TestCase("FizzBuzzTest", {
     "test should return Bang when passed a multiple of 7" : function () {
         assertEquals("Bang", fizzbuzz(7));
         assertEquals("Bang", fizzbuzz(14));
+    },
+    "test should return FizzBuzzBang when it is the case" : function () {
+        assertEquals("FizzBuzzBang", fizzbuzz(3*5*7));
     }
 });
