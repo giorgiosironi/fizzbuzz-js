@@ -1,10 +1,13 @@
 function fizzbuzz(number)
 {
-    if (number % 3 == 0) {
-        return 'Fizz';
-    }
-    if (number % 5 == 0) {
-        return 'Buzz';
+    correspondences = {
+        3 : 'Fizz',
+        5 : 'Buzz'
+    };
+    for (divisor in correspondences) {
+        if (number % divisor == 0) {
+            return correspondences[divisor];
+        }
     }
     return number;
 }
