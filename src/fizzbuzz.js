@@ -1,0 +1,4 @@
+function fizzbuzz()
+{
+    return 'Fizz';
+}
