@@ -1,25 +1,32 @@
 TestCase("FizzBuzzTest", {
+    setUp : function () {
+        this.fizzbuzz = new FizzBuzz({
+            3 : 'Fizz',
+            5 : 'Buzz',
+            7 : 'Bang'
+        });
+    },
     "test should return the number when passed 1 or 2" : function () {
-        assertEquals(1, fizzbuzz(1));
-        assertEquals(2, fizzbuzz(2));
+        assertEquals(1, this.fizzbuzz.accept(1));
+        assertEquals(2, this.fizzbuzz.accept(2));
     },
     "test should return Fizz when passed 3 or a multiple" : function () {
-        assertEquals("Fizz", fizzbuzz(3));
-        assertEquals("Fizz", fizzbuzz(6));
+        assertEquals("Fizz", this.fizzbuzz.accept(3));
+        assertEquals("Fizz", this.fizzbuzz.accept(6));
     },
     "test should return Buzz when passed 5 or a multiple" : function () {
-        assertEquals("Buzz", fizzbuzz(5));
-        assertEquals("Buzz", fizzbuzz(10));
+        assertEquals("Buzz", this.fizzbuzz.accept(5));
+        assertEquals("Buzz", this.fizzbuzz.accept(10));
     },
     "test should return FizzBuzz when passed a multiple of both 3 and 5" : function () {
-        assertEquals("FizzBuzz", fizzbuzz(15));
-        assertEquals("FizzBuzz", fizzbuzz(30));
+        assertEquals("FizzBuzz", this.fizzbuzz.accept(15));
+        assertEquals("FizzBuzz", this.fizzbuzz.accept(30));
     },
     "test should return Bang when passed a multiple of 7" : function () {
-        assertEquals("Bang", fizzbuzz(7));
-        assertEquals("Bang", fizzbuzz(14));
+        assertEquals("Bang", this.fizzbuzz.accept(7));
+        assertEquals("Bang", this.fizzbuzz.accept(14));
     },
     "test should return FizzBuzzBang when it is the case" : function () {
-        assertEquals("FizzBuzzBang", fizzbuzz(3*5*7));
+        assertEquals("FizzBuzzBang", this.fizzbuzz.accept(3*5*7));
     }
 });
